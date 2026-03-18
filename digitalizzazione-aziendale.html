@@ -11,14 +11,25 @@
 <body>
 <div id="cursor"></div><div id="cursor-ring"></div>
 <div class="scroll-indicator" id="scrollBar"></div>
+
 <nav>
-  <a href="index.html" class="nav-logo">Neural<span>.</span>SH</a>
-  <ul>
-    <li><a href="index.html#about">Chi siamo</a></li>
-    <li><a href="index.html#services">Servizi</a></li>
-    <li><a href="index.html#contact">Contatti</a></li>
-  </ul>
-</nav>
+		<a href="index.html" class="nav-logo">Neural<span>.</span>SH</a>
+		<ul>
+			<li><a href="index.html#about">Chi siamo</a></li>
+			<li><a href="index.html#services">Servizi</a></li>
+			<li><a href="index.html#contact">Contatti</a></li>
+		</ul>
+		<button id="hamburger" aria-label="Menu">
+			<span></span><span></span><span></span>
+		</button>
+	</nav>
+
+	<div id="mobileMenu">
+		<a href="index.html#about">Chi siamo</a>
+		<a href="index.html#services">Servizi</a>
+		<a href="index.html#contact">Contatti</a>
+	</div>
+	<div id="mobileOverlay" onclick="closeMobile()"></div>
 
 <div class="service-hero">
   <div class="service-num-big">02</div>
@@ -78,15 +89,6 @@
   <p>Copyright © <strong>Neural S.H.</strong> — 2026</p>
   <div class="footer-status"><div class="dot"></div>Tutti i sistemi operativi</div>
 </footer>
-<script>
-  const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
-  (function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
-  document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='6px';cursor.style.height='6px';ring.style.width='54px';ring.style.height='54px';});el.addEventListener('mouseleave',()=>{cursor.style.width='12px';cursor.style.height='12px';ring.style.width='36px';ring.style.height='36px';});});
-  window.addEventListener('scroll',()=>{document.getElementById('scrollBar').style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';});
-  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
+<script src="services.js"></script>
 </body>
 </html>

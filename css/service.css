@@ -103,6 +103,72 @@ body::after {
 	width: 0;
 }
 
+/* HAMBURGER SERVIZI */
+#hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	background: none;
+	border: none;
+	cursor: none;
+	padding: .4rem;
+	z-index: 110;
+}
+
+#hamburger span {
+	display: block;
+	width: 24px;
+	height: 2px;
+	background: var(--text);
+	transition: transform .3s, opacity .3s;
+}
+
+#hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#hamburger.open span:nth-child(2) { opacity: 0; }
+#hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+#mobileMenu {
+	position: fixed;
+	top: 0;
+	right: -280px;
+	width: 260px;
+	height: 100vh;
+	background: var(--bg2);
+	border-left: 1px solid var(--border);
+	padding: 5rem 2rem 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: .5rem;
+	z-index: 105;
+	transition: right .35s ease;
+}
+
+#mobileMenu.active { right: 0; }
+
+#mobileMenu a {
+	color: var(--text);
+	text-decoration: none;
+	font-size: .85rem;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	padding: .8rem 0;
+	border-bottom: 1px solid var(--border);
+	transition: color .2s;
+}
+
+#mobileMenu a:hover { color: var(--accent); }
+
+#mobileOverlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, .6);
+	z-index: 104;
+	backdrop-filter: blur(2px);
+}
+
+#mobileOverlay.active { display: block; }
+
 /* ── NAV ── */
 nav {
 	position: fixed;
@@ -568,9 +634,9 @@ footer strong {
 		padding: 1rem 1.5rem;
 	}
 
-	nav ul {
-		gap: 1.2rem;
-	}
+	nav ul { display: none; }
+	
+	#hamburger { display: flex; }
 
 	.service-hero {
 		padding-top: 5rem;

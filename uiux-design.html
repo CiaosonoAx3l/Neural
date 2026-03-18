@@ -1,118 +1,220 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UI/UX Design — Neural S.H.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/service.css"></head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>UI/UX Design — Neural S.H.</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/service.css">
+</head>
+
 <body>
-<div id="cursor"></div><div id="cursor-ring"></div>
-<div class="scroll-indicator" id="scrollBar"></div>
-<nav>
-  <a href="index.html" class="nav-logo">Neural<span>.</span>SH</a>
-  <ul>
-    <li><a href="index.html#about">Chi siamo</a></li>
-    <li><a href="index.html#services">Servizi</a></li>
-    <li><a href="index.html#contact">Contatti</a></li>
-  </ul>
-</nav>
+	<div id="cursor"></div>
+	<div id="cursor-ring"></div>
+	<div class="scroll-indicator" id="scrollBar"></div>
+	
+	<nav>
+		<a href="index.html" class="nav-logo">Neural<span>.</span>SH</a>
+		<ul>
+			<li><a href="index.html#about">Chi siamo</a></li>
+			<li><a href="index.html#services">Servizi</a></li>
+			<li><a href="index.html#contact">Contatti</a></li>
+		</ul>
+		<button id="hamburger" aria-label="Menu">
+			<span></span><span></span><span></span>
+		</button>
+	</nav>
 
-<div class="service-hero">
-  <div class="service-num-big">06</div>
-  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Servizi</a> / <span>UI/UX Design</span></p>
-  <h1>UI/UX <em>Design</em></h1>
-  <p class="sub">Interfacce che le persone capiscono subito e vogliono usare. Design pensato per chi lavora ogni giorno con lo strumento, non solo per chi lo valuta in una demo.</p>
-  <div class="hero-tags">
-    <span class="htag">Interfacce</span><span class="htag">Design System</span><span class="htag">Accessibilità</span><span class="htag">Prototipazione</span>
-  </div>
-</div>
+	<div id="mobileMenu">
+		<a href="index.html#about">Chi siamo</a>
+		<a href="index.html#services">Servizi</a>
+		<a href="index.html#contact">Contatti</a>
+	</div>
+	<div id="mobileOverlay" onclick="closeMobile()"></div>
 
-<div class="content">
-  <div class="section-block reveal">
-    <h2>Cosa offriamo</h2>
-    <p>Dal wireframe al design system completo. Progettiamo interfacce per applicazioni web, mobile e gestionali aziendali con focus su usabilità, coerenza visiva e accessibilità.</p>
-    <div class="feature-grid">
-      <div class="feature-card"><div class="fc-icon"><!----></div><div class="fc-title">UI Design</div><p class="fc-text">Interfacce visivamente coerenti, moderne e adattive. Ogni componente progettato con attenzione al dettaglio e alla gerarchia visiva.</p></div>
-      <div class="feature-card"><div class="fc-icon"><!----></div><div class="fc-title">UX Research</div><p class="fc-text">Analisi degli utenti, interviste, mappe di esperienza e test di usabilità per costruire interfacce basate su dati reali, non supposizioni.</p></div>
-      <div class="feature-card"><div class="fc-icon"><!----></div><div class="fc-title">Design System</div><p class="fc-text">Libreria di componenti riutilizzabili, documentata e condivisa tra design e sviluppo per garantire coerenza su tutti i touchpoint.</p></div>
-      <div class="feature-card"><div class="fc-icon"><!----></div><div class="fc-title">Accessibilità</div><p class="fc-text">Conformità WCAG 2.1 AA: contrasti, navigazione da tastiera, screen reader e standard di accessibilità integrati dal primo giorno.</p></div>
-    </div>
-  </div>
+	<div class="service-hero">
+		<div class="service-num-big">06</div>
+		<p class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Servizi</a> / <span>UI/UX
+				Design</span></p>
+		<h1>UI/UX <em>Design</em></h1>
+		<p class="sub">Interfacce che le persone capiscono subito e vogliono usare. Design pensato per chi lavora ogni
+			giorno con lo strumento, non solo per chi lo valuta in una demo.</p>
+		<div class="hero-tags">
+			<span class="htag">Interfacce</span><span class="htag">Design System</span><span
+				class="htag">Accessibilità</span><span class="htag">Prototipazione</span>
+		</div>
+	</div>
 
-  <div class="section-block reveal">
-    <h2>Anteprima componenti</h2>
-    <p>Un esempio del livello di dettaglio e pulizia visiva che portiamo in ogni interfaccia.</p>
-    <div class="ui-preview">
-      <div class="ui-preview-bar">
-        <div class="ui-dot"></div><div class="ui-dot"></div><div class="ui-dot"></div>
-      </div>
-      <div class="ui-mockup">
-        <div class="ui-sidebar">
-          <div class="ui-nav-item active"></div>
-          <div class="ui-nav-item" style="width:80%"></div>
-          <div class="ui-nav-item" style="width:70%"></div>
-          <div class="ui-nav-item" style="width:55%"></div>
-          <div class="ui-nav-item" style="width:75%"></div>
-        </div>
-        <div class="ui-main">
-          <div class="ui-card-row">
-            <div class="ui-card"><div class="ui-card-line accent"></div><div class="ui-card-line short"></div><div class="ui-card-line"></div></div>
-            <div class="ui-card"><div class="ui-card-line accent"></div><div class="ui-card-line short"></div><div class="ui-card-line"></div></div>
-            <div class="ui-card"><div class="ui-card-line accent"></div><div class="ui-card-line short"></div><div class="ui-card-line"></div></div>
-          </div>
-          <div>
-            <div class="ui-table-row"><div class="ui-cell accent"></div><div class="ui-cell"></div><div class="ui-cell"></div></div>
-            <div class="ui-table-row"><div class="ui-cell"></div><div class="ui-cell accent"></div><div class="ui-cell"></div></div>
-            <div class="ui-table-row"><div class="ui-cell"></div><div class="ui-cell"></div><div class="ui-cell accent"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="content">
+		<div class="section-block reveal">
+			<h2>Cosa offriamo</h2>
+			<p>Dal wireframe al design system completo. Progettiamo interfacce per applicazioni web, mobile e gestionali
+				aziendali con focus su usabilità, coerenza visiva e accessibilità.</p>
+			<div class="feature-grid">
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">UI Design</div>
+					<p class="fc-text">Interfacce visivamente coerenti, moderne e adattive. Ogni componente progettato
+						con attenzione al dettaglio e alla gerarchia visiva.</p>
+				</div>
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">UX Research</div>
+					<p class="fc-text">Analisi degli utenti, interviste, mappe di esperienza e test di usabilità per
+						costruire interfacce basate su dati reali, non supposizioni.</p>
+				</div>
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">Design System</div>
+					<p class="fc-text">Libreria di componenti riutilizzabili, documentata e condivisa tra design e
+						sviluppo per garantire coerenza su tutti i touchpoint.</p>
+				</div>
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">Accessibilità</div>
+					<p class="fc-text">Conformità WCAG 2.1 AA: contrasti, navigazione da tastiera, screen reader e
+						standard di accessibilità integrati dal primo giorno.</p>
+				</div>
+			</div>
+		</div>
 
-  <div class="section-block reveal">
-    <h2>Il nostro processo</h2>
-    <div class="process-list">
-      <div class="process-step"><div class="ps-num">01</div><div><div class="ps-title">Discovery & utenti</div><p class="ps-text">Identifichiamo chi usa il prodotto, in quale contesto, con quali obiettivi e con quali frustrazioni attuali.</p></div></div>
-      <div class="process-step"><div class="ps-num">02</div><div><div class="ps-title">Architettura informativa</div><p class="ps-text">Struttura della navigazione, gerarchia dei contenuti e flussi principali prima di disegnare qualsiasi schermata.</p></div></div>
-      <div class="process-step"><div class="ps-num">03</div><div><div class="ps-title">Wireframing</div><p class="ps-text">Schizzi a bassa fedeltà per validare la struttura con gli stakeholder in modo rapido e senza vincoli visivi.</p></div></div>
-      <div class="process-step"><div class="ps-num">04</div><div><div class="ps-title">Prototipo interattivo</div><p class="ps-text">Mockup ad alta fedeltà con interazioni simulate per testare i flussi con utenti reali prima dello sviluppo.</p></div></div>
-      <div class="process-step"><div class="ps-num">05</div><div><div class="ps-title">Handoff & supporto</div><p class="ps-text">Consegna al team di sviluppo con specifiche dettagliate, token di design e supporto durante l'implementazione.</p></div></div>
-    </div>
-  </div>
+		<div class="section-block reveal">
+			<h2>Anteprima componenti</h2>
+			<p>Un esempio del livello di dettaglio e pulizia visiva che portiamo in ogni interfaccia.</p>
+			<div class="ui-preview">
+				<div class="ui-preview-bar">
+					<div class="ui-dot"></div>
+					<div class="ui-dot"></div>
+					<div class="ui-dot"></div>
+				</div>
+				<div class="ui-mockup">
+					<div class="ui-sidebar">
+						<div class="ui-nav-item active"></div>
+						<div class="ui-nav-item" style="width:80%"></div>
+						<div class="ui-nav-item" style="width:70%"></div>
+						<div class="ui-nav-item" style="width:55%"></div>
+						<div class="ui-nav-item" style="width:75%"></div>
+					</div>
+					<div class="ui-main">
+						<div class="ui-card-row">
+							<div class="ui-card">
+								<div class="ui-card-line accent"></div>
+								<div class="ui-card-line short"></div>
+								<div class="ui-card-line"></div>
+							</div>
+							<div class="ui-card">
+								<div class="ui-card-line accent"></div>
+								<div class="ui-card-line short"></div>
+								<div class="ui-card-line"></div>
+							</div>
+							<div class="ui-card">
+								<div class="ui-card-line accent"></div>
+								<div class="ui-card-line short"></div>
+								<div class="ui-card-line"></div>
+							</div>
+						</div>
+						<div>
+							<div class="ui-table-row">
+								<div class="ui-cell accent"></div>
+								<div class="ui-cell"></div>
+								<div class="ui-cell"></div>
+							</div>
+							<div class="ui-table-row">
+								<div class="ui-cell"></div>
+								<div class="ui-cell accent"></div>
+								<div class="ui-cell"></div>
+							</div>
+							<div class="ui-table-row">
+								<div class="ui-cell"></div>
+								<div class="ui-cell"></div>
+								<div class="ui-cell accent"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div class="section-block reveal">
-    <h2>Strumenti</h2>
-    <div class="tech-grid">
-      <span class="tech-badge">Figma</span><span class="tech-badge">FigJam</span><span class="tech-badge">Storybook</span>
-      <span class="tech-badge">Framer</span><span class="tech-badge">Lottie</span><span class="tech-badge">Tailwind CSS</span>
-      <span class="tech-badge">WCAG 2.1</span><span class="tech-badge">Maze</span><span class="tech-badge">Hotjar</span>
-    </div>
-  </div>
+		<div class="section-block reveal">
+			<h2>Il nostro processo</h2>
+			<div class="process-list">
+				<div class="process-step">
+					<div class="ps-num">01</div>
+					<div>
+						<div class="ps-title">Discovery & utenti</div>
+						<p class="ps-text">Identifichiamo chi usa il prodotto, in quale contesto, con quali obiettivi e
+							con quali frustrazioni attuali.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">02</div>
+					<div>
+						<div class="ps-title">Architettura informativa</div>
+						<p class="ps-text">Struttura della navigazione, gerarchia dei contenuti e flussi principali
+							prima di disegnare qualsiasi schermata.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">03</div>
+					<div>
+						<div class="ps-title">Wireframing</div>
+						<p class="ps-text">Schizzi a bassa fedeltà per validare la struttura con gli stakeholder in modo
+							rapido e senza vincoli visivi.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">04</div>
+					<div>
+						<div class="ps-title">Prototipo interattivo</div>
+						<p class="ps-text">Mockup ad alta fedeltà con interazioni simulate per testare i flussi con
+							utenti reali prima dello sviluppo.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">05</div>
+					<div>
+						<div class="ps-title">Handoff & supporto</div>
+						<p class="ps-text">Consegna al team di sviluppo con specifiche dettagliate, token di design e
+							supporto durante l'implementazione.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div class="cta-box reveal">
-    <div>
-      <h3>La tua interfaccia è frustrante da usare?</h3>
-      <p>Un'ora di UX review gratuita sul tuo prodotto attuale. Ti diciamo dove stanno i problemi e come risolverli.</p>
-    </div>
-    <a href="index.html#contact" class="btn btn-primary">Richiedi una review →</a>
-  </div>
-</div>
+		<div class="section-block reveal">
+			<h2>Strumenti</h2>
+			<div class="tech-grid">
+				<span class="tech-badge">Figma</span><span class="tech-badge">FigJam</span><span
+					class="tech-badge">Storybook</span>
+				<span class="tech-badge">Framer</span><span class="tech-badge">Lottie</span><span
+					class="tech-badge">Tailwind CSS</span>
+				<span class="tech-badge">WCAG 2.1</span><span class="tech-badge">Maze</span><span
+					class="tech-badge">Hotjar</span>
+			</div>
+		</div>
 
-<footer>
-  <p>Copyright © <strong>Neural S.H.</strong> — 2026</p>
-  <div class="footer-status"><div class="dot"></div>Tutti i sistemi operativi</div>
-</footer>
-<script>
-  const cursor=document.getElementById('cursor'),ring=document.getElementById('cursor-ring');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
-  (function a(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
-  document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='6px';cursor.style.height='6px';ring.style.width='54px';ring.style.height='54px';});el.addEventListener('mouseleave',()=>{cursor.style.width='12px';cursor.style.height='12px';ring.style.width='36px';ring.style.height='36px';});});
-  window.addEventListener('scroll',()=>{document.getElementById('scrollBar').style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';});
-  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
+		<div class="cta-box reveal">
+			<div>
+				<h3>La tua interfaccia è frustrante da usare?</h3>
+				<p>Un'ora di UX review gratuita sul tuo prodotto attuale. Ti diciamo dove stanno i problemi e come
+					risolverli.</p>
+			</div>
+			<a href="index.html#contact" class="btn btn-primary">Richiedi una review →</a>
+		</div>
+	</div>
+
+	<footer>
+		<p>Copyright © <strong>Neural S.H.</strong> — 2026</p>
+		<div class="footer-status">
+			<div class="dot"></div>Tutti i sistemi operativi
+		</div>
+	</footer>
+	<script src="services.js"></script>
 </body>
+
 </html>

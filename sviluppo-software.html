@@ -1,136 +1,178 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sviluppo Software — Neural S.H.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/service.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Sviluppo Software — Neural S.H.</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/service.css">
 </head>
+
 <body>
-<div id="cursor"></div>
-<div id="cursor-ring"></div>
-<div class="scroll-indicator" id="scrollBar"></div>
+	<div id="cursor"></div>
+	<div id="cursor-ring"></div>
+	<div class="scroll-indicator" id="scrollBar"></div>
 
-<nav>
-  <a href="index.html" class="nav-logo">Neural<span>.</span>SH</a>
-  <ul>
-    <li><a href="index.html#about">Chi siamo</a></li>
-    <li><a href="index.html#services">Servizi</a></li>
-    <li><a href="index.html#contact">Contatti</a></li>
-  </ul>
-</nav>
+	<nav>
+		<a href="index.html" class="nav-logo">Neural<span>.</span>SH</a>
+		<ul>
+			<li><a href="index.html#about">Chi siamo</a></li>
+			<li><a href="index.html#services">Servizi</a></li>
+			<li><a href="index.html#contact">Contatti</a></li>
+		</ul>
+		<button id="hamburger" aria-label="Menu">
+			<span></span><span></span><span></span>
+		</button>
+	</nav>
 
-<div class="service-hero">
-  <div class="service-num-big">01</div>
-  <p class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Servizi</a> / <span>Sviluppo Software</span></p>
-  <h1>Sviluppo <em>Software</em></h1>
-  <p class="sub">Costruiamo applicazioni web, mobile e API su misura per le tue esigenze. Codice pulito, architetture scalabili, tempi certi.</p>
-  <div class="hero-tags">
-    <span class="htag">Web</span>
-    <span class="htag">App</span>
-    <span class="htag">API</span>
-    <span class="htag">Sistemi su misura</span>
-  </div>
-</div>
+	<div id="mobileMenu">
+		<a href="index.html#about">Chi siamo</a>
+		<a href="index.html#services">Servizi</a>
+		<a href="index.html#contact">Contatti</a>
+	</div>
+	<div id="mobileOverlay" onclick="closeMobile()"></div>
 
-<div class="content">
+	<div class="service-hero">
+		<div class="service-num-big">01</div>
+		<p class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Servizi</a> / <span>Sviluppo
+				Software</span></p>
+		<h1>Sviluppo <em>Software</em></h1>
+		<p class="sub">Costruiamo applicazioni web, mobile e API su misura per le tue esigenze. Codice pulito,
+			architetture
+			scalabili, tempi certi.</p>
+		<div class="hero-tags">
+			<span class="htag">Web</span>
+			<span class="htag">App</span>
+			<span class="htag">API</span>
+			<span class="htag">Sistemi su misura</span>
+		</div>
+	</div>
 
-  <div class="section-block reveal">
-    <h2>Cosa offriamo</h2>
-    <p>Realizziamo software su misura per aziende di ogni dimensione. Dal prototipo al prodotto finito, gestiamo l'intero ciclo di sviluppo con un approccio agile e orientato ai risultati.</p>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="fc-icon"><!----></div>
-        <div class="fc-title">Web Application</div>
-        <p class="fc-text">Applicazioni web moderne, responsive e performanti. SPA, PWA o architetture server-side rendering.</p>
-      </div>
-      <div class="feature-card">
-        <div class="fc-icon"><!----></div>
-        <div class="fc-title">App Mobile</div>
-        <p class="fc-text">Applicazioni iOS e Android native o cross-platform con React Native o Flutter.</p>
-      </div>
-      <div class="feature-card">
-        <div class="fc-icon"><!----></div>
-        <div class="fc-title">API & Backend</div>
-        <p class="fc-text">API REST e GraphQL robuste, microservizi, gateway e integrazioni con sistemi di terze parti.</p>
-      </div>
-      <div class="feature-card">
-        <div class="fc-icon"><!----></div>
-        <div class="fc-title">Sistemi Custom</div>
-        <p class="fc-text">Software gestionale, portali aziendali, dashboard operative e strumenti interni su misura.</p>
-      </div>
-    </div>
-  </div>
+	<div class="content">
 
-  <div class="section-block reveal">
-    <h2>Come lavoriamo</h2>
-    <p>Un processo strutturato che garantisce qualità, trasparenza e rispetto delle scadenze.</p>
-    <div class="process-list">
-      <div class="process-step">
-        <div class="ps-num">01</div>
-        <div><div class="ps-title">Discovery & Analisi</div><p class="ps-text">Raccogliamo i requisiti, analizziamo i flussi esistenti e definiamo l'architettura più adatta al progetto.</p></div>
-      </div>
-      <div class="process-step">
-        <div class="ps-num">02</div>
-        <div><div class="ps-title">Design & Prototipazione</div><p class="ps-text">Wireframe, mockup interattivi e design system prima di scrivere una sola riga di codice.</p></div>
-      </div>
-      <div class="process-step">
-        <div class="ps-num">03</div>
-        <div><div class="ps-title">Sviluppo Iterativo</div><p class="ps-text">Sprint agili con rilasci frequenti. Il cliente vede e tocca il prodotto in evoluzione ad ogni iterazione.</p></div>
-      </div>
-      <div class="process-step">
-        <div class="ps-num">04</div>
-        <div><div class="ps-title">Testing & QA</div><p class="ps-text">Test automatizzati, code review, performance audit e validazione su dispositivi reali prima del rilascio.</p></div>
-      </div>
-      <div class="process-step">
-        <div class="ps-num">05</div>
-        <div><div class="ps-title">Deploy & Supporto</div><p class="ps-text">Rilascio in produzione, monitoraggio attivo e manutenzione evolutiva nel tempo.</p></div>
-      </div>
-    </div>
-  </div>
+		<div class="section-block reveal">
+			<h2>Cosa offriamo</h2>
+			<p>Realizziamo software su misura per aziende di ogni dimensione. Dal prototipo al prodotto finito, gestiamo
+				l'intero ciclo di sviluppo con un approccio agile e orientato ai risultati.</p>
+			<div class="feature-grid">
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">Web Application</div>
+					<p class="fc-text">Applicazioni web moderne, responsive e performanti. SPA, PWA o architetture
+						server-side
+						rendering.</p>
+				</div>
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">App Mobile</div>
+					<p class="fc-text">Applicazioni iOS e Android native o cross-platform con React Native o Flutter.
+					</p>
+				</div>
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">API & Backend</div>
+					<p class="fc-text">API REST e GraphQL robuste, microservizi, gateway e integrazioni con sistemi di
+						terze
+						parti.</p>
+				</div>
+				<div class="feature-card">
+					<div class="fc-icon"><!----></div>
+					<div class="fc-title">Sistemi Custom</div>
+					<p class="fc-text">Software gestionale, portali aziendali, dashboard operative e strumenti interni
+						su misura.
+					</p>
+				</div>
+			</div>
+		</div>
 
-  <div class="section-block reveal">
-    <h2>Stack tecnologico</h2>
-    <p>Utilizziamo tecnologie moderne, stabili e con ampio supporto nella comunità.</p>
-    <div class="tech-grid">
-      <span class="tech-badge">React</span><span class="tech-badge">Next.js</span><span class="tech-badge">TypeScript</span>
-      <span class="tech-badge">Node.js</span><span class="tech-badge">Python</span><span class="tech-badge">PostgreSQL</span>
-      <span class="tech-badge">MongoDB</span><span class="tech-badge">Docker</span><span class="tech-badge">GraphQL</span>
-      <span class="tech-badge">REST API</span><span class="tech-badge">React Native</span><span class="tech-badge">Flutter</span>
-    </div>
-  </div>
+		<div class="section-block reveal">
+			<h2>Come lavoriamo</h2>
+			<p>Un processo strutturato che garantisce qualità, trasparenza e rispetto delle scadenze.</p>
+			<div class="process-list">
+				<div class="process-step">
+					<div class="ps-num">01</div>
+					<div>
+						<div class="ps-title">Discovery & Analisi</div>
+						<p class="ps-text">Raccogliamo i requisiti, analizziamo i flussi esistenti e definiamo
+							l'architettura più
+							adatta al progetto.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">02</div>
+					<div>
+						<div class="ps-title">Design & Prototipazione</div>
+						<p class="ps-text">Wireframe, mockup interattivi e design system prima di scrivere una sola riga
+							di codice.
+						</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">03</div>
+					<div>
+						<div class="ps-title">Sviluppo Iterativo</div>
+						<p class="ps-text">Sprint agili con rilasci frequenti. Il cliente vede e tocca il prodotto in
+							evoluzione ad
+							ogni iterazione.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">04</div>
+					<div>
+						<div class="ps-title">Testing & QA</div>
+						<p class="ps-text">Test automatizzati, code review, performance audit e validazione su
+							dispositivi reali
+							prima del rilascio.</p>
+					</div>
+				</div>
+				<div class="process-step">
+					<div class="ps-num">05</div>
+					<div>
+						<div class="ps-title">Deploy & Supporto</div>
+						<p class="ps-text">Rilascio in produzione, monitoraggio attivo e manutenzione evolutiva nel
+							tempo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <div class="cta-box reveal">
-    <div>
-      <h3>Hai un progetto in mente?</h3>
-      <p>Raccontaci la tua idea — valutiamo insieme fattibilità, tempi e costi senza impegno.</p>
-    </div>
-    <a href="index.html#contact" class="btn btn-primary">Contattaci →</a>
-  </div>
+		<div class="section-block reveal">
+			<h2>Stack tecnologico</h2>
+			<p>Utilizziamo tecnologie moderne, stabili e con ampio supporto nella comunità.</p>
+			<div class="tech-grid">
+				<span class="tech-badge">React</span><span class="tech-badge">Next.js</span><span
+					class="tech-badge">TypeScript</span>
+				<span class="tech-badge">Node.js</span><span class="tech-badge">Python</span><span
+					class="tech-badge">PostgreSQL</span>
+				<span class="tech-badge">MongoDB</span><span class="tech-badge">Docker</span><span
+					class="tech-badge">GraphQL</span>
+				<span class="tech-badge">REST API</span><span class="tech-badge">React Native</span><span
+					class="tech-badge">Flutter</span>
+			</div>
+		</div>
 
-</div>
+		<div class="cta-box reveal">
+			<div>
+				<h3>Hai un progetto in mente?</h3>
+				<p>Raccontaci la tua idea — valutiamo insieme fattibilità, tempi e costi senza impegno.</p>
+			</div>
+			<a href="index.html#contact" class="btn btn-primary">Contattaci →</a>
+		</div>
 
-<footer>
-  <p>Copyright © <strong>Neural S.H.</strong> — 2026</p>
-  <div class="footer-status"><div class="dot"></div>Tutti i sistemi operativi</div>
-</footer>
+	</div>
 
-<script>
-  const cursor = document.getElementById('cursor'), ring = document.getElementById('cursor-ring');
-  let mx=0,my=0,rx=0,ry=0;
-  document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
-  (function animateRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateRing);})();
-  document.querySelectorAll('a,button').forEach(el=>{
-    el.addEventListener('mouseenter',()=>{cursor.style.width='6px';cursor.style.height='6px';ring.style.width='54px';ring.style.height='54px';});
-    el.addEventListener('mouseleave',()=>{cursor.style.width='12px';cursor.style.height='12px';ring.style.width='36px';ring.style.height='36px';});
-  });
-  const scrollBar=document.getElementById('scrollBar');
-  window.addEventListener('scroll',()=>{scrollBar.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';});
-  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-</script>
+	<footer>
+		<p>Copyright © <strong>Neural S.H.</strong> — 2026</p>
+		<div class="footer-status">
+			<div class="dot"></div>Tutti i sistemi operativi
+		</div>
+	</footer>
+	<script src="services.js"></script>
 </body>
+
 </html>
